@@ -10,4 +10,8 @@ class Admin extends Controller
     {
        return view('admin/dashboard');
     }
+    public function exam_category()
+    {
+        return view('admin/exam_categry');
+    }
 }
