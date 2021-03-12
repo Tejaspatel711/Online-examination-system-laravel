@@ -26,6 +26,8 @@
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -179,7 +181,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ url('admin\exam_categry') }}" class="nav-link">
+                <a href="{{ url('exam_categry') }}" class="nav-link">
                   <i class="nav-icon fas fa-th"></i>
                   <p>
                    Category
@@ -271,11 +273,20 @@
 <script src="plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
+<script src="js/custom.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+   $('.datatable').dataTable();
+ });
+</script>
 </body>
 </html>

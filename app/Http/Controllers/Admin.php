@@ -14,4 +14,8 @@ class Admin extends Controller
     {
         return view('admin/exam_categry');
     }
+    public function add_new_category(Request $request)
+    {
+        print_r($request->all());
+    }
 }
