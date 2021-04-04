@@ -34,4 +34,10 @@ class Admin extends Controller
             }
             echo json_encode($arr);
     }
+    public function delete_category($id)
+    {
+        $cat = Oex_category::where('id',$id)->get()->first();
+        $cat->delete();
+        return redirect(url('exam_categry'));
+    }
 }
