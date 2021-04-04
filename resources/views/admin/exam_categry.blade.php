@@ -42,13 +42,24 @@
                 <th>Action</th>
               </thead>
               <tbody>
+                @foreach ($category as $key => $cat)
+                    <tr>
+                      <td><?php echo $key+1 ?></td>
+                      <td><?php echo $cat['name'] ?></td>
+                      <td><input type="checkbox" name="status"></td>
+                      <td>
+                        <a href="javascript:;" class="btn btn-sm btn-info">Edit</a>
+                        <a href="javascript:;" class="btn btn-sm btn-danger">Delete</a>
+                      </td>
+                    </tr>
+                @endforeach
+              </tbody>
                 <tfoot>
                   <th>#</th>
                   <th>Name</th>
                   <th>Status</th>
                   <th>Action</th>
                 </tfoot>
-              </tbody>
             </table>
           </div>
           <!-- /.card-body -->
@@ -68,7 +79,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="{{ url('add_new_category') }}" class="database_operation">
+        <form action="{{ url('add_new_categry') }}" class="database_operation">
         <div class="row">
           <div class="col-sm-12">
             <div class="form-group">
