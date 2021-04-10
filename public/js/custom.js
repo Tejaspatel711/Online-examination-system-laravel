@@ -10,6 +10,6 @@ $(document).on('submit','.database_operation',function(){
                 window.location.href=resp.reload;
             },1000);
         }
-    })
+    });
     return false;
 });

@@ -34,10 +34,26 @@ class Admin extends Controller
             }
             echo json_encode($arr);
     }
+
     public function delete_category($id)
     {
         $cat = Oex_category::where('id',$id)->get()->first();
         $cat->delete();
         return redirect(url('exam_categry'));
+    }
+
+    public function edit_category($id)
+    {
+        $category= Oex_category::where('id',$id)->get()->first();
+        return view('admin/edit_categry',['category'=>$category]);
+    }
+
+    public function edit_new_category(Request $request)
+    {
+        // print_r($request->all());
+        $cat = Oex_category::where('id',$request->id)->get()->first();
+        $cat->name=$request->name;
+        $cat->update();
+        echo json_encode(array('status'=>'true','message'=>'Category Successfully Updated','reload'=>url('exam_categry')));
     }
 }

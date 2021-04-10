@@ -48,7 +48,7 @@
                       <td><?php echo $cat['name'] ?></td>
                       <td><input type="checkbox" name="status"></td>
                       <td>
-                        <a href="javascript:;" class="btn btn-sm btn-info">Edit</a>
+                        <a href="{{ url('edit_categry/'.$cat['id']) }}" class="btn btn-sm btn-info">Edit</a>
                         <a href="{{ url('admin/delete_category/'.$cat['id']) }}" class="btn btn-sm btn-danger">Delete</a>
                       </td>
                     </tr>
